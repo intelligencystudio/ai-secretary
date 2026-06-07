@@ -10,6 +10,19 @@ Create my personal AI secretary using https://github.com/intelligencystudio/ai-s
 
 That is the whole starting point.
 
+## Shareable Secretary Card
+
+The contact unit is an AI Secretary Card: a self-bootstrapping business card for agents.
+
+Give [AI_SECRETARY_CARD.md](AI_SECRETARY_CARD.md) or [examples/secretary-card/ai-secretary-card.json](examples/secretary-card/ai-secretary-card.json) to Codex, Cowork, or another agent.
+
+The receiving agent should:
+
+1. connect to the secretary if an Agent Card already exists;
+2. deploy a secretary from this framework if it does not exist yet;
+3. create the owner profile, privacy policy, context capsules, approval gates, and audit log;
+4. continue the secretary-to-secretary exchange without asking the human for protocol details.
+
 ## The Idea
 
 People should not have to manually explain their whole context every time they meet someone useful. Each person can run an AI secretary that knows a bounded, permissioned version of their context.
@@ -62,8 +75,10 @@ See [docs/prototype.md](docs/prototype.md) for local run commands and smoke test
 
 The framework includes JSON schemas and example payloads for secretary-to-secretary exchange:
 
+- [schemas/secretary-card.schema.json](schemas/secretary-card.schema.json): self-bootstrapping secretary card schema.
 - [schemas/secretary-exchange.schema.json](schemas/secretary-exchange.schema.json): full protocol envelope and message schema.
 - [schemas/context-capsule.schema.json](schemas/context-capsule.schema.json): standalone context capsule schema.
+- [examples/secretary-card](examples/secretary-card): machine-readable card that can connect or bootstrap a secretary.
 - [examples/secretary-exchange](examples/secretary-exchange): complete example flow from handshake to approval-gated private context release.
 
 ## Why This Matters
