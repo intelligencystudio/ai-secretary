@@ -1,0 +1,22 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-011",
+  "method": "secretary.introduction.draft",
+  "params": {
+    "draftId": "intro-001",
+    "proposalId": "proposal-001",
+    "subject": "Potential two-week CRM context pilot",
+    "body": "Alice and Bob may have a useful pilot opportunity: Alice can prototype a privacy-safe CRM context assistant, and Bob can provide anonymized workflow feedback. Both secretaries recommend a short scoping call after Bob approves sharing a sample workflow.",
+    "recipients": [
+      {
+        "displayName": "Alice",
+        "secretaryId": "sec-alice"
+      },
+      {
+        "displayName": "Bob",
+        "secretaryId": "sec-bob"
+      }
+    ],
+    "requiresApproval": true
+  }
+}

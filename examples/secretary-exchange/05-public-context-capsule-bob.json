@@ -1,0 +1,42 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-005",
+  "method": "secretary.context.offer",
+  "params": {
+    "capsuleId": "cap-bob-public-001",
+    "ownerId": "owner-bob",
+    "createdAt": "2026-06-07T12:01:00Z",
+    "expiresAt": "2026-07-07T12:01:00Z",
+    "disclosure": "public",
+    "summary": "Bob works with B2B teams and wants lightweight AI automation that improves CRM context and follow-up quality.",
+    "topics": ["B2B distribution", "CRM automation", "sales operations"],
+    "payload": {
+      "roles": ["operator", "growth advisor"],
+      "interests": ["B2B partnerships", "CRM automation", "AI-assisted sales operations"],
+      "offers": ["operator feedback", "pilot framing", "intro path after approval"],
+      "asks": ["automation prototypes", "CRM intelligence", "technical partner for experiments"],
+      "projects": [
+        {
+          "name": "CRM Follow-Up Quality Sprint",
+          "summary": "Test whether AI-generated account context improves outbound follow-up and partner conversations.",
+          "stage": "exploration",
+          "needs": ["prototype", "context ingestion", "privacy-safe workflow"],
+          "offers": ["sales workflow feedback", "pilot use case design"]
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "type": "manual_note",
+        "summary": "Bob is actively seeking AI workflow experiments for CRM and sales operations.",
+        "confidence": 0.85
+      }
+    ],
+    "policy": {
+      "canForward": false,
+      "allowedRecipients": ["sec-alice"],
+      "requiresApprovalFor": ["customer identity", "calendar", "commercial terms"],
+      "redactions": ["customer names", "deal values"]
+    }
+  }
+}

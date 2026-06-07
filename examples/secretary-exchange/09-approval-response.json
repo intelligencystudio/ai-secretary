@@ -1,0 +1,14 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-009",
+  "method": "secretary.approval.response",
+  "params": {
+    "approvalId": "approval-alice-001",
+    "ownerId": "owner-alice",
+    "decision": "approved",
+    "decidedAt": "2026-06-07T12:10:00Z",
+    "allowedFields": ["pilotScope", "timeline", "nonSensitiveRoadmapSummary"],
+    "redactions": ["client names", "revenue", "credentials", "private repositories"],
+    "comment": "Share only the pilot scope and timing. Do not share client names or private repository links."
+  }
+}

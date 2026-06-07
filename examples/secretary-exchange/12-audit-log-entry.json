@@ -1,0 +1,21 @@
+{
+  "eventId": "audit-001",
+  "timestamp": "2026-06-07T12:11:30Z",
+  "actor": {
+    "secretaryId": "sec-alice",
+    "ownerDisplayName": "Alice",
+    "organization": "Alice Labs",
+    "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+    "a2aUrl": "https://alice-secretary.example.com/a2a"
+  },
+  "counterparty": {
+    "secretaryId": "sec-bob",
+    "ownerDisplayName": "Bob",
+    "organization": "Bob Growth Studio",
+    "agentCardUrl": "https://bob-secretary.example.com/.well-known/agent-card.json",
+    "a2aUrl": "https://bob-secretary.example.com/a2a"
+  },
+  "eventType": "private_context_released",
+  "summary": "Alice approved and released a limited private pilot scope capsule to Bob's secretary.",
+  "relatedIds": ["approval-alice-001", "release-alice-001", "cap-alice-private-001", "proposal-001"]
+}

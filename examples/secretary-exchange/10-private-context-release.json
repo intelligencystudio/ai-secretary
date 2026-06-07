@@ -1,0 +1,46 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-010",
+  "method": "secretary.context.release",
+  "params": {
+    "releaseId": "release-alice-001",
+    "approvalId": "approval-alice-001",
+    "releasedAt": "2026-06-07T12:11:00Z",
+    "capsule": {
+      "capsuleId": "cap-alice-private-001",
+      "ownerId": "owner-alice",
+      "createdAt": "2026-06-07T12:11:00Z",
+      "expiresAt": "2026-06-14T12:11:00Z",
+      "disclosure": "approval_required",
+      "summary": "Approved limited pilot scope for a CRM context assistant.",
+      "topics": ["pilot scope", "CRM automation", "timeline"],
+      "payload": {
+        "projects": [
+          {
+            "name": "CRM Context Pilot",
+            "summary": "A two-week prototype that receives anonymized CRM notes and drafts context-aware follow-up suggestions.",
+            "stage": "approved for exploratory pilot",
+            "needs": ["anonymized workflow sample", "success criteria", "one review call"],
+            "offers": ["prototype endpoint", "context capsule schema", "follow-up draft generation"]
+          }
+        ],
+        "timeline": "Two weeks after receiving anonymized sample data.",
+        "nonSensitiveRoadmapSummary": "Focus on context ingestion, opportunity matching, approval logs, and safe disclosure."
+      },
+      "evidence": [
+        {
+          "type": "manual_note",
+          "summary": "Owner approved limited release in approval-alice-001.",
+          "sourceId": "approval-alice-001",
+          "confidence": 1
+        }
+      ],
+      "policy": {
+        "canForward": false,
+        "allowedRecipients": ["sec-bob"],
+        "requiresApprovalFor": ["calendar", "documents", "customer names"],
+        "redactions": ["client names", "revenue", "credentials", "private repositories"]
+      }
+    }
+  }
+}

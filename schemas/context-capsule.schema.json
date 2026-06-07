@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/intelligencystudio/ai-secretary/schemas/context-capsule.schema.json",
+  "title": "AI Secretary Context Capsule",
+  "description": "A standalone schema for validating one permissioned context capsule.",
+  "$ref": "secretary-exchange.schema.json#/$defs/contextCapsule"
+}

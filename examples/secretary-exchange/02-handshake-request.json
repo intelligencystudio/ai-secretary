@@ -1,0 +1,62 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-002",
+  "method": "secretary.handshake",
+  "params": {
+    "from": {
+      "secretaryId": "sec-alice",
+      "ownerDisplayName": "Alice",
+      "organization": "Alice Labs",
+      "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+      "a2aUrl": "https://alice-secretary.example.com/a2a"
+    },
+    "intent": {
+      "summary": "Explore whether Alice and Bob have a mutually useful collaboration path.",
+      "topics": ["AI agents", "CRM automation", "B2B distribution", "workflow tooling"],
+      "desiredOutcome": "Return 1-3 concrete collaboration proposals and required approval steps."
+    },
+    "requestedDisclosure": "public",
+    "supportedMethods": [
+      "secretary.handshake",
+      "secretary.context.offer",
+      "secretary.match.request",
+      "secretary.match.propose",
+      "secretary.approval.request",
+      "secretary.approval.response",
+      "secretary.context.release",
+      "secretary.introduction.draft",
+      "secretary.audit.append"
+    ],
+    "profile": {
+      "ownerId": "owner-alice",
+      "displayName": "Alice",
+      "organization": "Alice Labs",
+      "roles": ["founder", "product engineer"],
+      "interests": ["AI agents", "automation", "B2B workflows"],
+      "offers": ["prototype implementation", "agent workflow design", "technical due diligence"],
+      "asks": ["B2B distribution", "pilot customers", "operator feedback"],
+      "availability": {
+        "status": "selective",
+        "timeBudget": "2 calls per week",
+        "preferredChannels": ["secretary", "email after approval"]
+      },
+      "privacy": {
+        "defaultDisclosure": "public",
+        "allowedTopics": ["AI agents", "automation", "product collaboration"],
+        "blockedTopics": ["active client names", "credentials", "private financials"],
+        "requiresApproval": ["contacts", "documents", "calendar", "financials", "client_data", "private_project_data"],
+        "neverShare": ["credentials", "private_keys", "access_tokens", "passwords", "unapproved_client_data"],
+        "retention": {
+          "storeInboundCapsules": true,
+          "storeOutboundCapsules": true,
+          "ttlDays": 30,
+          "deleteOnRequest": true
+        },
+        "audit": {
+          "logEveryExchange": true,
+          "shareAuditWithOwner": true
+        }
+      }
+    }
+  }
+}

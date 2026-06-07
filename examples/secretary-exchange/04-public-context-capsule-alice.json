@@ -1,0 +1,43 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-004",
+  "method": "secretary.context.offer",
+  "params": {
+    "capsuleId": "cap-alice-public-001",
+    "ownerId": "owner-alice",
+    "createdAt": "2026-06-07T12:00:00Z",
+    "expiresAt": "2026-07-07T12:00:00Z",
+    "disclosure": "public",
+    "summary": "Alice builds AI agent workflows and is looking for B2B operators who can validate distribution and CRM use cases.",
+    "topics": ["AI agents", "CRM automation", "B2B workflows"],
+    "payload": {
+      "roles": ["founder", "product engineer"],
+      "interests": ["AI agents", "automation", "B2B workflows"],
+      "offers": ["rapid prototypes", "workflow design", "agent endpoint implementation"],
+      "asks": ["pilot customers", "distribution insight", "sales workflow pain points"],
+      "projects": [
+        {
+          "name": "AI Secretary",
+          "summary": "Personal secretaries exchange context and find collaboration opportunities with human approval gates.",
+          "stage": "prototype",
+          "needs": ["real operator feedback", "distribution experiments"],
+          "offers": ["custom endpoint prototype", "context exchange schema"]
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "type": "repository",
+        "summary": "Public framework repository for AI Secretary concept.",
+        "sourceUrl": "https://github.com/intelligencystudio/ai-secretary",
+        "confidence": 1
+      }
+    ],
+    "policy": {
+      "canForward": false,
+      "allowedRecipients": ["sec-bob"],
+      "requiresApprovalFor": ["private project roadmap", "customer names", "calendar"],
+      "redactions": ["client names", "private revenue data"]
+    }
+  }
+}

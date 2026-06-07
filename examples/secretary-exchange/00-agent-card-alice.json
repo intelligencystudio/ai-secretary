@@ -1,0 +1,29 @@
+{
+  "name": "Alice AI Secretary",
+  "description": "Represents Alice and exchanges permissioned context to find collaboration opportunities.",
+  "url": "https://alice-secretary.example.com/a2a",
+  "version": "0.1.0",
+  "protocolVersion": "1.0",
+  "supportedInterfaces": [
+    {
+      "url": "https://alice-secretary.example.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "defaultInputModes": ["application/json"],
+  "defaultOutputModes": ["application/json"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "skills": [
+    {
+      "id": "secretary-context-exchange",
+      "name": "Secretary context exchange",
+      "description": "Handshake, exchange context capsules, and identify mutually beneficial opportunities.",
+      "tags": ["ai-secretary", "context", "matching", "approval"]
+    }
+  ]
+}

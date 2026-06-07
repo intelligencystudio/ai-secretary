@@ -1,0 +1,35 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-006",
+  "method": "secretary.match.request",
+  "params": {
+    "requestId": "match-001",
+    "from": {
+      "secretaryId": "sec-alice",
+      "ownerDisplayName": "Alice",
+      "organization": "Alice Labs",
+      "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+      "a2aUrl": "https://alice-secretary.example.com/a2a"
+    },
+    "to": {
+      "secretaryId": "sec-bob",
+      "ownerDisplayName": "Bob",
+      "organization": "Bob Growth Studio",
+      "agentCardUrl": "https://bob-secretary.example.com/.well-known/agent-card.json",
+      "a2aUrl": "https://bob-secretary.example.com/a2a"
+    },
+    "goal": "Find collaboration options where Alice's AI workflow prototype capability helps Bob's CRM automation needs.",
+    "availableCapsuleIds": ["cap-alice-public-001", "cap-bob-public-001"],
+    "constraints": [
+      "Do not reveal customer identities.",
+      "Do not schedule anything without approval.",
+      "Prefer low-commitment pilot next steps."
+    ],
+    "rankingWeights": {
+      "mutual_benefit": 0.4,
+      "speed_to_test": 0.25,
+      "privacy_safety": 0.25,
+      "strategic_upside": 0.1
+    }
+  }
+}

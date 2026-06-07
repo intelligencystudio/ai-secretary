@@ -58,6 +58,14 @@ This repository includes a tiny dependency-free Python prototype:
 
 See [docs/prototype.md](docs/prototype.md) for local run commands and smoke tests.
 
+## Schemas And Exchange Fixtures
+
+The framework includes JSON schemas and example payloads for secretary-to-secretary exchange:
+
+- [schemas/secretary-exchange.schema.json](schemas/secretary-exchange.schema.json): full protocol envelope and message schema.
+- [schemas/context-capsule.schema.json](schemas/context-capsule.schema.json): standalone context capsule schema.
+- [examples/secretary-exchange](examples/secretary-exchange): complete example flow from handshake to approval-gated private context release.
+
 ## Why This Matters
 
 The social graph has contacts. The professional graph needs context. AI secretaries can make context portable, permissioned, and useful without forcing people to expose everything to everyone.

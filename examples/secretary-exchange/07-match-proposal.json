@@ -1,0 +1,82 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-007",
+  "method": "secretary.match.propose",
+  "params": {
+    "requestId": "match-001",
+    "generatedAt": "2026-06-07T12:03:00Z",
+    "proposals": [
+      {
+        "proposalId": "proposal-001",
+        "title": "Two-week CRM context pilot",
+        "summary": "Alice builds a small context intake and follow-up assistant for one anonymized CRM workflow; Bob provides operator feedback and pilot framing.",
+        "mutualBenefit": {
+          "owner": [
+            "Alice gets real B2B workflow feedback.",
+            "Alice validates the AI Secretary context exchange pattern in a CRM-adjacent use case."
+          ],
+          "counterparty": [
+            "Bob gets a fast prototype for CRM follow-up quality.",
+            "Bob can test AI automation without exposing customer identities."
+          ]
+        },
+        "evidenceCapsuleIds": ["cap-alice-public-001", "cap-bob-public-001"],
+        "privateDetailsNeeded": ["anonymized CRM workflow sample", "one approved calendar slot"],
+        "nextSteps": [
+          {
+            "action": "Ask Alice to approve sharing a private roadmap summary and available pilot scope.",
+            "owner": "owner",
+            "requiresApproval": true
+          },
+          {
+            "action": "Ask Bob to approve sharing an anonymized CRM workflow sample.",
+            "owner": "counterparty",
+            "requiresApproval": true
+          },
+          {
+            "action": "Draft a short intro message after both approvals.",
+            "owner": "secretaries",
+            "requiresApproval": true
+          }
+        ],
+        "risk": {
+          "level": "low",
+          "reasons": [
+            "Public context is sufficient for initial match.",
+            "Customer identities and private business data remain approval-gated."
+          ]
+        },
+        "confidence": 0.86
+      },
+      {
+        "proposalId": "proposal-002",
+        "title": "Distribution feedback interview",
+        "summary": "Bob gives Alice a structured 45-minute feedback session on positioning AI Secretary for B2B operators.",
+        "mutualBenefit": {
+          "owner": [
+            "Alice gets distribution and positioning feedback."
+          ],
+          "counterparty": [
+            "Bob can influence a tool that may help his CRM automation goals."
+          ]
+        },
+        "evidenceCapsuleIds": ["cap-alice-public-001", "cap-bob-public-001"],
+        "privateDetailsNeeded": ["calendar availability"],
+        "nextSteps": [
+          {
+            "action": "Request approval from both owners to share calendar windows.",
+            "owner": "both",
+            "requiresApproval": true
+          }
+        ],
+        "risk": {
+          "level": "low",
+          "reasons": [
+            "No sensitive business data required before the call."
+          ]
+        },
+        "confidence": 0.78
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "jsonrpc": "2.0",
+  "id": "msg-008",
+  "method": "secretary.approval.request",
+  "params": {
+    "approvalId": "approval-alice-001",
+    "ownerId": "owner-alice",
+    "requestedBy": {
+      "secretaryId": "sec-alice",
+      "ownerDisplayName": "Alice",
+      "organization": "Alice Labs",
+      "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+      "a2aUrl": "https://alice-secretary.example.com/a2a"
+    },
+    "action": "release_private_context",
+    "reason": "Proposal proposal-001 needs a limited private pilot scope summary before Bob can decide whether to proceed.",
+    "dataPreview": {
+      "fields": ["pilotScope", "timeline", "nonSensitiveRoadmapSummary"],
+      "redactedFields": ["client names", "revenue", "credentials", "private repositories"]
+    },
+    "sensitivity": "approval_required",
+    "expiresAt": "2026-06-08T12:00:00Z"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "scenarioId": "alice-bob-crm-pilot",
+  "description": "Core JSON-RPC sequence for two AI secretaries discovering mutual upside while keeping private details approval-gated.",
+  "messages": [
+    {
+      "jsonrpc": "2.0",
+      "id": "batch-001",
+      "method": "secretary.handshake",
+      "params": {
+        "from": {
+          "secretaryId": "sec-alice",
+          "ownerDisplayName": "Alice",
+          "organization": "Alice Labs",
+          "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+          "a2aUrl": "https://alice-secretary.example.com/a2a"
+        },
+        "intent": {
+          "summary": "Explore whether Alice and Bob have a mutually useful collaboration path.",
+          "topics": ["AI agents", "CRM automation", "B2B distribution"],
+          "desiredOutcome": "Return concrete collaboration proposals."
+        },
+        "requestedDisclosure": "public",
+        "supportedMethods": [
+          "secretary.handshake",
+          "secretary.context.offer",
+          "secretary.match.request",
+          "secretary.match.propose",
+          "secretary.approval.request",
+          "secretary.approval.response",
+          "secretary.context.release"
+        ],
+        "profile": {
+          "ownerId": "owner-alice",
+          "displayName": "Alice",
+          "organization": "Alice Labs",
+          "roles": ["founder", "product engineer"],
+          "interests": ["AI agents", "automation", "B2B workflows"],
+          "offers": ["prototype implementation", "agent workflow design"],
+          "asks": ["B2B distribution", "pilot customers"],
+          "privacy": {
+            "defaultDisclosure": "public",
+            "allowedTopics": ["AI agents", "automation", "product collaboration"],
+            "blockedTopics": ["active client names", "credentials"],
+            "requiresApproval": ["contacts", "documents", "calendar", "financials", "client_data", "private_project_data"],
+            "neverShare": ["credentials", "private_keys", "access_tokens", "passwords", "unapproved_client_data"]
+          }
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "batch-002",
+      "method": "secretary.context.offer",
+      "params": {
+        "capsuleId": "cap-alice-public-001",
+        "ownerId": "owner-alice",
+        "createdAt": "2026-06-07T12:00:00Z",
+        "disclosure": "public",
+        "summary": "Alice builds AI agent workflows and is looking for B2B operators who can validate distribution and CRM use cases.",
+        "topics": ["AI agents", "CRM automation", "B2B workflows"],
+        "payload": {
+          "roles": ["founder", "product engineer"],
+          "interests": ["AI agents", "automation"],
+          "offers": ["rapid prototypes", "workflow design"],
+          "asks": ["pilot customers", "distribution insight"]
+        },
+        "policy": {
+          "canForward": false,
+          "allowedRecipients": ["sec-bob"],
+          "requiresApprovalFor": ["private roadmap", "customer names", "calendar"],
+          "redactions": ["client names", "private revenue data"]
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": "batch-003",
+      "method": "secretary.match.request",
+      "params": {
+        "requestId": "match-001",
+        "from": {
+          "secretaryId": "sec-alice",
+          "ownerDisplayName": "Alice",
+          "organization": "Alice Labs",
+          "agentCardUrl": "https://alice-secretary.example.com/.well-known/agent-card.json",
+          "a2aUrl": "https://alice-secretary.example.com/a2a"
+        },
+        "to": {
+          "secretaryId": "sec-bob",
+          "ownerDisplayName": "Bob",
+          "organization": "Bob Growth Studio",
+          "agentCardUrl": "https://bob-secretary.example.com/.well-known/agent-card.json",
+          "a2aUrl": "https://bob-secretary.example.com/a2a"
+        },
+        "goal": "Find collaboration options where Alice's AI workflow prototype capability helps Bob's CRM automation needs.",
+        "availableCapsuleIds": ["cap-alice-public-001", "cap-bob-public-001"],
+        "constraints": ["Do not reveal customer identities.", "Prefer low-commitment pilot next steps."]
+      }
+    }
+  ]
+}
