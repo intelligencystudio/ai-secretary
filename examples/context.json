@@ -1,0 +1,20 @@
+{
+  "project": "Example employer project",
+  "summary": "Initial onboarding context for a Codex agent.",
+  "requirements": [
+    "Expose an HTTP endpoint that can receive context from an employer-side agent.",
+    "Make the endpoint easy to publish through ngrok.",
+    "Support A2A-style discovery and JSON-RPC calls."
+  ],
+  "links": [
+    {
+      "label": "Project brief",
+      "url": "https://example.com/project-brief"
+    }
+  ],
+  "acceptanceCriteria": [
+    "GET /.well-known/agent-card.json returns agent metadata.",
+    "POST /contexts stores a JSON context bundle.",
+    "POST /a2a accepts JSON-RPC context.ingest or message/send."
+  ]
+}
