@@ -1,0 +1,15 @@
+{
+  "jsonrpc": "2.0",
+  "id": "ctx-1",
+  "method": "context.ingest",
+  "params": {
+    "context": {
+      "project": "Example employer project",
+      "summary": "Context supplied through JSON-RPC.",
+      "constraints": [
+        "Use the public ngrok URL from the agent card.",
+        "Keep secrets out of payloads unless explicitly approved."
+      ]
+    }
+  }
+}
