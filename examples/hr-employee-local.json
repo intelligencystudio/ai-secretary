@@ -1,0 +1,8 @@
+{
+  "id": "local-employee",
+  "name": "Local employee Codex agent",
+  "agentBaseUrl": "http://127.0.0.1:8787",
+  "projectIds": [
+    "codex-ngrok-a2a"
+  ]
+}
