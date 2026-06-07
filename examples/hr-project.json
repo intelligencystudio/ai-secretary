@@ -1,0 +1,19 @@
+{
+  "id": "codex-ngrok-a2a",
+  "name": "Codex ngrok A2A endpoint",
+  "summary": "Create an A2A-friendly endpoint so employer agents can provide context to employee Codex agents.",
+  "context": {
+    "currentGoal": "Provide project context to employees through their agent endpoints.",
+    "background": "Employees expose local or ngrok-backed Codex context intake agents. HR owns project context and dispatches updates."
+  },
+  "constraints": [
+    "Do not send secrets unless explicitly approved.",
+    "Prefer structured JSON payloads with source links and acceptance criteria."
+  ],
+  "acceptanceCriteria": [
+    "HR agent stores project context.",
+    "HR agent stores employee agent endpoints.",
+    "HR agent dispatches context through A2A JSON-RPC or REST."
+  ],
+  "links": []
+}
